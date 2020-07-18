@@ -10,8 +10,6 @@ const multiplyNumeric = menu => {
   for (const key in menu) {
     if (typeof menu[key] === 'number') {
       menu[key] = menu[key] * 2;
-    } else {
-      continue;
     }
   }
 };
