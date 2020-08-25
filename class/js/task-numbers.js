@@ -45,12 +45,12 @@
 //СЛУЧАЙНОЕ ЦЕЛОЕ ЧИСЛО
 
 //НЕ ВЕРНОЕ РЕШЕНИЕ
-function randomInteger(min, max) {
-  let rand = min + Math.random() * (max - min);
-  return Math.round(rand);
-}
+// function randomInteger(min, max) {
+//   let rand = min + Math.random() * (max - min);
+//   return Math.round(rand);
+// }
 
-alert(randomInteger(1, 3));
+// alert(randomInteger(1, 3));
 
 //ПРАВИЛЬНОЕ РЕШЕНИЕ
 function randomInteger(min, max) {
@@ -59,13 +59,18 @@ function randomInteger(min, max) {
   return Math.round(rand);
 }
 
-alert(randomInteger(1, 3));
+console.log(randomInteger(3, 7));
+console.log(randomInteger(3, 7));
+console.log(randomInteger(3, 7));
+console.log(randomInteger(3, 7));
+console.log(randomInteger(3, 7));
+console.log(randomInteger(3, 7));
 
 //ДРУГОЕ ПРАВИЛЬНОЕ РЕШЕНИЕ
-function randomInteger(min, max) {
-  // случайное число от min до (max+1)
-  let rand = min + Math.random() * (max + 1 - min);
-  return Math.floor(rand);
-}
+// function randomInteger(min, max) {
+//   // случайное число от min до (max+1)
+//   let rand = min + Math.random() * (max + 1 - min);
+//   return Math.floor(rand);
+// }
 
-alert(randomInteger(1, 3));
+// alert(randomInteger(1, 3));
