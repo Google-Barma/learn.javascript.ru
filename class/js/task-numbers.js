@@ -13,16 +13,16 @@
 
 // console.log(parseInt('FF', 16)); парсит из шеснадцатиричного в десятичное число
 
-function readNumber() {
-  let number;
-  do {
-    number = prompt('Введите число!');
-  } while (isNaN(number));
-  if (number === '' || number === null) return null;
-  else return +number;
-}
+// function readNumber() {
+//   let number;
+//   do {
+//     number = prompt('Введите число!');
+//   } while (isNaN(number));
+//   if (number === '' || number === null) return null;
+//   else return +number;
+// }
 
-console.log(readNumber());
+// console.log(readNumber());
 
 // console.log((0.2).toFixed(20));
 
@@ -32,3 +32,40 @@ console.log(readNumber());
 //   i += 0.2;
 //   console.log(i);
 // }
+
+//РАНДОМНОЕ ЧИСЛО В ИНТЕРВАЛЕ ЧИСЕЛ
+// function random(min, max) {
+//   return min + Math.random() * (max - min);
+// }
+
+// alert(random(1, 5));
+// alert(random(1, 5));
+// alert(random(1, 5));
+
+//СЛУЧАЙНОЕ ЦЕЛОЕ ЧИСЛО
+
+//НЕ ВЕРНОЕ РЕШЕНИЕ
+function randomInteger(min, max) {
+  let rand = min + Math.random() * (max - min);
+  return Math.round(rand);
+}
+
+alert(randomInteger(1, 3));
+
+//ПРАВИЛЬНОЕ РЕШЕНИЕ
+function randomInteger(min, max) {
+  // получить случайное число от (min-0.5) до (max+0.5)
+  let rand = min - 0.5 + Math.random() * (max - min + 1);
+  return Math.round(rand);
+}
+
+alert(randomInteger(1, 3));
+
+//ДРУГОЕ ПРАВИЛЬНОЕ РЕШЕНИЕ
+function randomInteger(min, max) {
+  // случайное число от min до (max+1)
+  let rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
+}
+
+alert(randomInteger(1, 3));
