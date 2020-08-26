@@ -58,3 +58,8 @@ accumulator.read();
 accumulator.read();
 accumulator.read();
 console.log(accumulator.value);
+
+console.dir(accumulator);
+
+const ab = {};
+console.dir(ab);
