@@ -54,64 +54,140 @@
 // console.log(date.toDateString());
 // console.log(date.toTimeString());
 
-let Jan01_1970 = new Date(1000000000000);
+// let Jan01_1970 = new Date(1000000000000);
 
-let date = new Date(2020, 11, 3);
+// let date = new Date(2020, 11, 3);
 
-console.log(date);
+// console.log(date);
 
-const millisecDate = new Date();
-console.log(millisecDate.getTime());
+// const millisecDate = new Date();
+// console.log(millisecDate.getTime());
 
-console.log(new Date().getTimezoneOffset());
+// console.log(new Date().getTimezoneOffset());
 
-let start = new Date(); // начинаем отсчёт времени
+// let start = new Date(); // начинаем отсчёт времени
 
-// выполняем некоторые действия
-for (let i = 0; i < 100000; i++) {
-  let doSomething = i * i * i;
-}
+// // выполняем некоторые действия
+// for (let i = 0; i < 100000; i++) {
+//   let doSomething = i * i * i;
+// }
 
-let end = new Date(); // заканчиваем отсчёт времени
+// let end = new Date(); // заканчиваем отсчёт времени
 
-console.log(`Цикл отработал за ${end - start} миллисекунд`);
+// console.log(`Цикл отработал за ${end - start} миллисекунд`);
 
-let start1 = Date.now(); // количество миллисекунд с 1 января 1970 года
+// let start1 = Date.now(); // количество миллисекунд с 1 января 1970 года
 
-// выполняем некоторые действия
-for (let i = 0; i < 100000; i++) {
-  let doSomething = i * i * i;
-}
+// // выполняем некоторые действия
+// for (let i = 0; i < 100000; i++) {
+//   let doSomething = i * i * i;
+// }
 
-let end1 = Date.now(); // заканчиваем отсчёт времени
+// let end1 = Date.now(); // заканчиваем отсчёт времени
 
-console.log(`Цикл отработал за ${end1 - start1} миллисекунд`);
+// console.log(`Цикл отработал за ${end1 - start1} миллисекунд`);
 
-function diffSubtract(date1, date2) {
-  return date2 - date1;
-}
+// // function diffSubtract(date1, date2) {
+// //   return date2 - date1;
+// // }
 
-function diffGetTime(date1, date2) {
-  return date2.getTime() - date1.getTime();
-}
+// // function diffGetTime(date1, date2) {
+// //   return date2.getTime() - date1.getTime();
+// // }
 
-function bench(f) {
-  let date1 = new Date(0);
-  let date2 = new Date();
+// // function bench(f) {
+// //   let date1 = new Date(0);
+// //   let date2 = new Date();
 
-  let start = Date.now();
-  for (let i = 0; i < 100000; i++) f(date1, date2);
-  return Date.now() - start;
-}
+// //   let start = Date.now();
+// //   for (let i = 0; i < 100000; i++) f(date1, date2);
+// //   return Date.now() - start;
+// // }
 
-let time1 = 0;
-let time2 = 0;
+// // let time1 = 0;
+// // let time2 = 0;
 
-// bench(upperSlice) и bench(upperLoop) поочерёдно запускаются 10 раз
-for (let i = 0; i < 10; i++) {
-  time1 += bench(diffSubtract);
-  time2 += bench(diffGetTime);
-}
+// // // bench(upperSlice) и bench(upperLoop) поочерёдно запускаются 10 раз
+// // for (let i = 0; i < 10; i++) {
+// //   time1 += bench(diffSubtract);
+// //   time2 += bench(diffGetTime);
+// // }
 
-console.log('Итоговое время diffSubtract: ' + time1);
-console.log('Итоговое время diffGetTime: ' + time2);
+// // console.log('Итоговое время diffSubtract: ' + time1);
+// function diffSubtract(date1, date2) {
+//   return date2 - date1;
+// }
+
+// function diffGetTime(date1, date2) {
+//   return date2.getTime() - date1.getTime();
+// }
+
+// function bench(f) {
+//   let date1 = new Date(0);
+//   let date2 = new Date();
+
+//   let start = Date.now();
+//   for (let i = 0; i < 100000; i++) f(date1, date2);
+//   return Date.now() - start;
+// }
+
+// let time1 = 0;
+// let time2 = 0;
+
+// // bench(upperSlice) и bench(upperLoop) поочерёдно запускаются 10 раз
+// for (let i = 0; i < 10; i++) {
+//   time1 += bench(diffSubtract);
+//   time2 += bench(diffGetTime);
+// }
+
+// console.log('Итоговое время diffSubtract: ' + time1);
+// console.log('Итоговое время diffGetTime: ' + time2);
+
+// console.log('Итоговое время diffGetTime: ' + time2);
+// console.log('Итоговое время diffSubtract: ' + time1);
+
+// let date2 = new Date(Date.parse('2012-01-26T13:51:50.417-07:00'));
+
+// console.log(date2);
+
+// performance.now();
+
+// const date = new Date('2020.02.20 15:30');
+// console.log(date);
+
+// let date = new Date(2012, 0, 3); // 3 января 2012 года
+
+// function getWeekDay(date) {
+//   let days = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+
+//   return days[date.getDay()];
+// }
+
+// console.log(getWeekDay(date));
+
+// let date = new Date(2012, 0, 3);
+
+// function getLocalDay(date) {
+//   let day = date.getDay();
+
+//   // if (day == 0) {
+//   //   // день недели 0 (воскресенье) в европейской нумерации будет 7
+//   //   day = 7;
+//   // }
+
+//   return day;
+// }
+
+// console.log(getLocalDay(date));
+
+// function getSecondsToTomorrow() {
+//   let now = new Date();
+
+//   // завтрашняя дата
+//   let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+
+//   let diff = tomorrow - now; // разница в миллисекундах
+//   return Math.round(diff / 1000); // преобразуем в секунды
+// }
+
+// console.log(getSecondsToTomorrow());
